@@ -1,9 +1,10 @@
-from flask import Flask, render_template, redirect
+from flask import Flask, render_template, redirect, url_for
 import os
 
 #global constants, including URLs
 BASE_URL = 'http://localhost:5000/'
-RESUME_PATH = 'static/resources/Samuel_Frank_Resume.pdf'
+RESUME_PATH = 'resources/resume.pdf'
+# RESUME_PATH = '/resources/resume.pdf'
 
 app = Flask(__name__)
 
@@ -18,7 +19,9 @@ def personal():
 
 @app.route('/resume/')
 def resume():
-    return redirect(os.path.join(BASE_URL,RESUME_PATH))
+#     return redirect('static/resources/Samuel_Frank_Resume.pdf')
+    return redirect(url_for('static',filename=RESUME_PATH))
+#     return app.send_static_file(os.path.join('static',RESUME_PATH))
     
     
     #Why doesn't this work?
