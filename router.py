@@ -19,31 +19,7 @@ def personal():
 
 @app.route('/resume/')
 def resume():
-#     return redirect('static/resources/Samuel_Frank_Resume.pdf')
     return redirect(url_for('static',filename=RESUME_PATH))
-#     return app.send_static_file(os.path.join('static',RESUME_PATH))
-    
-    
-    #Why doesn't this work?
-    #return redirect(str(request.host) + 'Samuel_Frank_Resume.pdf')
-
-# resume_path = 'static/resources/Samuel_Frank_Resume.pdf'
-# app.add_url_rule('/resume/', resume_path, build_only=True)
-
-
-# @app.route('/resume/')
-# def resume():
-#     resume_path = 'static/resources/Samuel_Frank_Resume.pdf'
-#     
-    
-#     with open(resume_path,'r') as resume:
-#         response = make_response(resume)
-#         response.headers['Content-Type'] = 'application/pdf'
-#         response.headers['Content-Disposition'] = \
-#                 'inline; filename={}.pdf'.format(resume_path)
-#         return response
-    
-    #return render_template('resume.xml')
 
 if __name__ == '__main__':
     app.run(debug=True)
