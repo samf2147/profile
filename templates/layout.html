@@ -18,12 +18,33 @@
                     <li><a href="{{ url_for('home')}}">Home</a></li>
                     <li><a href="{{ url_for('personal')}}">Personal</a></li>
                     <li><a href="{{ url_for('resume')}}">Resume</a></li>
+                    <li><a href="http://www.github.com/sfrank2147" target="_blank">Github</a><li>
                 </ul>
             </nav>
         </header>
-        <div class="container">
+        <div class="container content">
             {% block content %}
             {% endblock %}
         </div>
+        <sidebar id="sidebar">
+            <div class="sidebar-text">
+                <p><strong>People/Sites I'm Reading:</strong><p>
+                <p>Programming:</p>
+                <ul class="sidebar-list">
+                    <li><a href="https://research.microsoft.com/en-us/people/mickens/" target="_blank">James Mickens</a></li>
+                    <li><a href="www.reddit.com/r/programming" target="_blank">/r/programming</a></li>
+                </ul>
+                <p>Teaching:</p>
+                <ul class="sidebar-list">
+                    <li><a href="http://blog.mrmeyer.com/" target="_blank">Dan Meyer</a></li>
+                </ul>
+                <p>Other:</p>
+                <ul class="sidebar-list">
+                    <li><a href="http://www.slate.com/blogs/moneybox.html" target="_blank">Matthew Yglesias</a></li>
+                    <li><a href="http://www.seriouseats.com" target="_blank">Serious Eats</a></li>
+                </ul>
+
+            </div>
+        </sidebar>
     </body>
 </html>
